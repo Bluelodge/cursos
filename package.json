@@ -1,0 +1,14 @@
+{
+  "name": "cursos",
+  "version": "1.0.1",
+  "description": "primer trabajo",
+  "main": "principal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Katherine Martínez kmartinezg119@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
