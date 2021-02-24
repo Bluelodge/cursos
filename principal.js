@@ -20,14 +20,14 @@ if (!process.argv[2]) {
 
   let cursoId = cursos.find(curso => curso.id === argv.i);
   if (cursoId != null) {
-    res = 'El estudiante ' + argv.nombre + ' con cédula ' + argv.cedula +
+    res = '<h2> Resultado pre-matricula </h2><p> El estudiante ' + argv.nombre + ' con cédula ' + argv.cedula +
           ', se ha pre-matriculado en el curso ' + cursoId.nombre + ' [ID: ' + cursoId.id +
-          '] que tiene una duración de ' + cursoId.tiempo + ' y un valor de ' + cursoId.valor;
+          '] que tiene una duración de ' + cursoId.tiempo + ' y un valor de ' + cursoId.valor + '</p>';
 
-    fs.writeFile('matricula.txt', res, (err) => {
+    fs.writeFile('./public/index.html', res, (err) => {
       if (err) throw (err);
       console.log('Se generó pre-matrícula al curso ' + cursoId.id +
-                  '.\nPor favor revise el archivo creado.');
+                  '.\nPor favor revise el puerto 3000 con node express.');
     });
   } else {
     console.log('Debe ingresar un ID de curso válido.');
