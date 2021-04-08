@@ -2,14 +2,17 @@
   "name": "cursos",
   "version": "1.0.1",
   "description": "primer trabajo",
-  "main": "principal.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Katherine Martínez kmartinezg119@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "yargs": "^16.2.0"
   }
 }

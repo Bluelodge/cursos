@@ -1,0 +1,38 @@
+{{>header}}
+
+<div class="container">
+  <p class="bg-success tipo"> ADMINISTRADOR </p>
+  <h2 class="text-center"> Crear cursos </h2>
+  <form action="/crear" method="post">
+    {{{crearcurso idC nombreC detalleC valorC modC tiempoC}}}
+
+    <div class="row">
+      <div class="col-sm">
+        <label for="id" class=""> ID curso </label>
+        <input type="number" class="form-control" name="id" required>
+        <label for="mod" class="form-label"> Modalidad </label>
+        <select class="form-select" name="mod">
+          <option value="-"> - </option>
+          <option value="Presencial"> Presencial </option>
+          <option value="Virtual"> Virtual </option>
+        </select>
+        <label for="desc" class="form-label"> Detalle </label>
+        <textarea class="form-control" name="desc" required> </textarea>
+      </div>
+
+      <div class="col-sm">
+        <label for="nombre" class="form-label"> Nombre curso </label>
+        <input type="text" class="form-control" name="nombre" required>
+        <label for="valor" class="form-label"> Valor $ </label>
+        <input type="number" class="form-control" name="valor" required>
+        <label for="tiempo" class="form-label"> Intensidad horaria </label>
+        <input type="text" class="form-control" name="tiempo">
+      </div>
+    </div>
+
+    <input type="submit" class="btn btn-success boton" value="Crear">
+
+  </form>
+</div>
+
+{{>footer}}

@@ -1,0 +1,64 @@
+.imgind {
+  min-width: 130px;
+}
+
+.foot {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.tipo {
+  color: white;
+  font-weight: bold;
+  padding: 5px 10PX;
+}
+
+.jumbotron {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  padding-top: 15px;
+}
+
+.frase {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-right: 80px;
+  text-align: right;
+  width: 100%;
+}
+
+.boton {
+  margin: 7px 0;
+}
+
+h1 {
+  margin: 25px 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.curinfo{
+  font-size: 18px;
+  height: 62px;
+}
+
+.insinfo {
+  font-size: 18px;
+  font-weight: bold;;
+}
+
+span {
+  font-weight: bold;
+}
+
+.detalle {
+  max-width: 100px;
+}

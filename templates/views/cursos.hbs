@@ -1,0 +1,45 @@
+{{>header}}
+
+<div class="container">
+  <p class="bg-success tipo"> ADMINISTRADOR </p>
+  <h2 class="text-center"> Cursos actuales </h2>
+  <form action="/cursos" method="post">
+    {{{ eliminarCurso idCur }}}
+    <table class="table border-dark">
+      <thead class="table-dark text-center">
+        <th> ID </th>
+        <th> NOMBRE </th>
+        <th> DETALLE </th>
+        <th> VALOR </th>
+        <th> MODALIDAD </th>
+        <th> HORAS </th>
+        <th> ESTADO </th>
+        <th> ELIMINAR </th>
+      </thead>
+      <tbody>
+        {{{verCursos}}}
+      </tbody>
+    </table>
+  </form>
+</div>
+
+<div class="container">
+  <h2 class="text-center"> Actualizar estado </h2>
+  <form action="/cursos" method="post">
+    {{{estadoCurso idC}}}
+    <div>
+      {{{ selectCur }}}
+    </div>
+    <div>
+      <input type="submit" class="btn btn-success boton" value="Actualizar">
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <p class="bg-success tipo"> ESTUDIANTE </p>
+  <h2 class="text-center"> Cursos disponibles </h2>
+  {{{verDisponibles}}}
+</div>
+
+{{>footer}}
