@@ -17,6 +17,6 @@ Version: 2.0.1
 - Body-parser
 - Path
 - Bootstrap
-Para ejecutarlo: nodemon src/app
+- Heroku
 
 © Katherine Martínez Gaviria
