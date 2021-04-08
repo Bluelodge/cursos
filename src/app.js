@@ -9,6 +9,9 @@ require('./helpers');
 const funcionesC = require('./funCursos.js');
 const funcionesR = require('./funRegistros.js');
 
+//PUERTO
+const port = process.env.PORT // 3000;
+
 //PATHS
 const dirPublico = path.join(__dirname, '../public');
 const dirViews = path.join(__dirname, '../templates/views');
@@ -103,4 +106,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000);
+app.listen(port, () => {
+  console.log ('Servidor en el puerto ' + port);
+});
