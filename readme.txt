@@ -19,4 +19,16 @@ Version: 2.0.1
 - Bootstrap
 - Heroku
 
+
+Version: 3.0.1
+- Express
+- HBS
+- Body-parser
+- Path
+- Bootstrap
+- Heroku
+- Mongoose
+- Bcryptjs
+- Memorystore
+
 © Katherine Martínez Gaviria
