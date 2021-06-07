@@ -1,0 +1,24 @@
+{{>header}}
+
+<div class="row justify-content-center">
+  <h2 class="text-center"> CREAR CUENTA </h2>
+  <div class="border border-success w-50 m-4 p-4">
+    <form action="/registro" method="post">
+      <label for="id" class="form-label b"> Documento de identidad </label>
+      <input type="number" class="form-control" name="id" required>
+      <label for="nombre" class="form-label b"> Nombre: </label>
+      <input type="text" class="form-control" name="nombre" required>
+      <label for="email" class="form-label b"> Correo </label>
+      <input type="email" class="form-control" name="email" required>
+      <label for="tel" class="form-label b"> Teléfono: </label>
+      <input type="number" class="form-control" name="tel" required>
+      <label for="pass" class="form-label b"> Contraseña </label>
+      <input type="password" class="form-control" name="pass" required>
+      <div class="text-center">
+        <input type="submit" class="btn btn-success boton" value="Registrar">
+      </div>
+    </form>
+  </div>
+</div>
+
+{{>footer}}

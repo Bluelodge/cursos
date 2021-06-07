@@ -1,0 +1,26 @@
+{{>header}}
+<div class="container">
+  <h2 class="text-center"> CURSOS INSCRITOS  </h2>
+  <table class="table border-dark">
+    <thead class="table-dark text-center">
+      <th> CURSO </th>
+      <th> DETALLE </th>
+      <th> MODALIDAD </th>
+      <th> HORAS </th>
+      <th> ESTADO </th>
+    </thead>
+    <tbody>
+      {{#each listaCursos}}
+        <tr>
+          <td> {{this.nombreCur}} </td>
+          <td> {{this.detalleCur}} </td>
+          <td> {{this.modalicdadCur}} </td>
+          <td> {{this.tiempoCur}} </td>
+          <td class="b2"> {{this.estadoCur}} </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{>footer}}

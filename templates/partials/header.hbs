@@ -10,6 +10,63 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fw-bold">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-success" aria-current="page" href="/"> INICIO </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success" href="/cursos"> CURSOS </a>
+            </li>
+            {{#if sesion}}
+              {{#if sesionUsuario}}
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="/inscribir"> INSCRIBIR </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="/inscritos"> INSCRITOS </a>
+                  </li>
+                </ul>
+                <form class="d-flex" action="/salir" method="get">
+                  <p class="m-1"> {{nombre}} </p>
+                  <button type="submit" class="btn btn-dark formindex"> Cerrar sesión </button>
+                </form>
+              {{/if}}
+              {{#if sesionCoordinador}}
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="/crear"> CREAR </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="/inscritos"> INSCRITOS </a>
+                  </li>
+                </ul>
+                <form class="d-flex" action="/salir" method="get">
+                  <label> {{nombre}} </label>
+                  <button type="submit" class="btn btn-success formindex"> Cerrar sesión </button>
+                </form>
+              {{/if}}
+              {{else}}
+                <li class="nav-item">
+                  <a class="nav-link text-success" href="/registro"> REGISTRARSE </a>
+                </li>
+              </ul>
+              <form class="d-flex" action="/" method="post">
+                <input type="text" class="form-control formindex" name="idUsuario" placeholder="Identificación" aria-label="Search">
+                <input type="password" class="form-control formindex" name="passw" placeholder="Contraseña" aria-label="Search">
+                <button type="submit" class="btn btn-success formindex"> Iniciar Sesión </button>
+              </form>
+            {{/if}}
+        </div>
+      </div>
+    </nav>
+
+    {{{loggeado}}}
+
     <div class="container">
       <div id="carouselind" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -47,32 +104,3 @@
         </div>
       </div>
     </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fw-bold">
-      <div class="container">
-        <div class="row">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-success" aria-current="page" href="/"> INICIO </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success" href="/crear"> CREAR </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success" href="/cursos"> CURSOS </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success" href="/inscribir"> INSCRIBIR </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-success" href="/inscritos"> INSCRITOS </a>
-            </li>
-          </form>
-        </div>
-      </div>
-      </div>
-    </nav>

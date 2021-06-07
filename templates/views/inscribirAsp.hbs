@@ -1,0 +1,25 @@
+{{>header}}
+<div class="row justify-content-center">
+  <h2 class="text-center"> INSCRIBIR A CURSO </h2>
+  {{{texto}}}
+  <div class="border border-success w-50 m-4 p-4">
+    <form action="/inscribir" method="post">
+
+      <label for="idE" class="form-label d-inline pe-3 b"> Estudiante: </label>
+      <input type="text" class="form-control" name="nomE" value="{{nombreAspirante}}" readonly>
+      <input type="hidden" name="idE" value="{{idAspirante}}">
+      <label for="idC" class="form-label d-inline pe-3 b"> CURSOS: </label>
+      <select class="form-select w-25 d-inline" name="idC">
+        {{#each disponibles}}
+          <option value="{{this._id}}"> {{this.nombreC}} </option>
+        {{/each}}
+      </select>
+
+      <div class="text-center">
+        <input type="submit" class="btn btn-success boton" value="Registrar">
+      </div>
+    </form>
+  </div>
+</div>
+
+{{>footer}}

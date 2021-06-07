@@ -1,0 +1,46 @@
+{{>header}}
+<div class="container">
+  <p class="bg-success tipo"> COORDINADOR {{nombre}} </p>
+  <h2 class="text-center"> CURSOS ACTUALES </h2>
+  <table class="table border-dark">
+    <thead class="table-dark text-center">
+      <th> ID </th>
+      <th> CURSO </th>
+      <th> DETALLE </th>
+      <th> VALOR </th>
+      <th> MODALIDAD </th>
+      <th> HORAS </th>
+      <th> ESTADO </th>
+    </thead>
+    <tbody>
+      {{#each listaCursos}}
+        <tr>
+          <td> {{{this.idC}}} </td>
+          <td> {{this.nombreC}} </td>
+          <td> {{this.detalleC}} </td>
+          <td class="detalle"> $ {{this.valorC}} </td>
+          <td> {{this.modC}} </td>
+          <td> {{this.tiempoC}}h </td>
+          <td class="b2"> {{this.estadoC}} </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2 class="text-center"> Actualizar estado </h2>
+  <form action="/cursos" method="post">
+    <div>
+      <label for="id" class="form-label d-inline pe-3 b"> CURSOS: </label>
+      <select class="form-select w-25 d-inline" name="id">
+        {{#each listaCursos}}
+          <option value="{{this._id}}"> {{this.idC}} - {{this.nombreC}} </option>
+        {{/each}}
+      </select>
+    </div>
+    <div>
+      <input type="submit" class="btn btn-success boton" value="Actualizar">
+    </div>
+  </form>
+</div>

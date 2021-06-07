@@ -1,45 +1,32 @@
 {{>header}}
 
 <div class="container">
-  <p class="bg-success tipo"> ADMINISTRADOR </p>
-  <h2 class="text-center"> Cursos actuales </h2>
-  <form action="/cursos" method="post">
-    {{{ eliminarCurso idCur }}}
-    <table class="table border-dark">
-      <thead class="table-dark text-center">
-        <th> ID </th>
-        <th> NOMBRE </th>
-        <th> DETALLE </th>
-        <th> VALOR </th>
-        <th> MODALIDAD </th>
-        <th> HORAS </th>
-        <th> ESTADO </th>
-        <th> ELIMINAR </th>
-      </thead>
-      <tbody>
-        {{{verCursos}}}
-      </tbody>
-    </table>
-  </form>
-</div>
+  <h2 class="text-center"> CURSOS DISPONIBLES </h2>
 
-<div class="container">
-  <h2 class="text-center"> Actualizar estado </h2>
-  <form action="/cursos" method="post">
-    {{{estadoCurso idC}}}
-    <div>
-      {{{ selectCur }}}
-    </div>
-    <div>
-      <input type="submit" class="btn btn-success boton" value="Actualizar">
-    </div>
-  </form>
-</div>
+  <div class="row row-cols-3">
+    {{#each curDisp}}
+      <div class="col">
+        <p class="d-grid col-12">
+          <button class="btn btn-outline-success bg-light text-success btn-sm curinfo" type="button" data-bs-toggle="collapse" data-bs-target="#{{this.codeC}}" aria-expanded="true" aria-controls="{{this.codeC}}">
+            <p>
+              <span> Curso: </span> {{this.nombreC}}
+              <span> Valor: </span> {{this.valorC}}
+            </p>
+          </button>
+        </p>
+        <div class="collapse" id="{{this.codeC}}">
+          <div class="card card-body border-success border-2 mb-3">
+            <span class="text-success"> CURSO: </span> {{this.nombreC}} <br/>
+            <span class="text-success"> VALOR: </span> $ {{this.valorC}} <br/>
+            <span class="text-success"> DESCRIPCIÓN: </span> {{this.detalleC}} <br/>
+            <span class="text-success"> MODALIDAD: </span> {{this.modC}} <br/>
+            <span class="text-success"> INTENSIDAD: </span> {{this.tiempoC}} horas <br/>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 
-<div class="container">
-  <p class="bg-success tipo"> ESTUDIANTE </p>
-  <h2 class="text-center"> Cursos disponibles </h2>
-  {{{verDisponibles}}}
 </div>
 
 {{>footer}}

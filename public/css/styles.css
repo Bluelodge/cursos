@@ -7,6 +7,15 @@
   text-align: justify;
 }
 
+.b {
+  font-weight: bold;
+}
+
+.b2 {
+  color: #2f5c00;
+  font-weight: bold;
+}
+
 .tipo {
   color: white;
   font-weight: bold;
@@ -30,7 +39,14 @@
 }
 
 .boton {
-  margin: 7px 0;
+  margin: 20px 3px;
+  width: 150px;
+}
+
+.formindex {
+  margin: 0 3px;
+  height: 35px;
+  width: 130px;
 }
 
 h1 {
