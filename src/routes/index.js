@@ -4,19 +4,7 @@ const app = express();
 const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require('bcryptjs');
-/*
 
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-
-const session = require('express-session');
-
-var MemoryStore = require('memorystore')(session);
-require('./../helpers');
-
-//PORT AND DB CONECTION
-require('./../config/config');
-*/
 //PATHS
 const dirPublico = path.join(__dirname, './../../public');
 const dirViews = path.join(__dirname, './../../templates/views');
